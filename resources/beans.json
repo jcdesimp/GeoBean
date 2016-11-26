@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Gitesi",
+        "description": "Blackberry Jam, Orange Peel, Clove Melon, Wildflowers",
+        "location": "Rwanda Karongi"
+    },
+    {
+        "id": 2,
+        "name": "Cenfrocafe",
+        "description": "Orance, melon, marshmallow, pu-erh tea",
+        "location": "Peru"
+    },
+    {
+        "id": 3,
+        "name": "Castelo",
+        "description": "Green apple, pomegranate, basmati rice, toast",
+        "location": "Castelo Brazil"
+    }
+]

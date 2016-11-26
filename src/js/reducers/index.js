@@ -1,11 +1,11 @@
-"use strict"
+"use strict";
 
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
 
-import counter from "./counter";
+import beanList from "./beanList";
 
 export default combineReducers({
-    counter,
+    beanList,
     routing: routerReducer
 });

@@ -1,7 +1,14 @@
-"use strict"
+"use strict";
 
-import React, {PropTypes} from 'react';
+import React from 'react';
 import NavigationBar from './navigationBar';
+
+let links = [
+    {
+        to: '/',
+        name: 'ToastDos'
+    }
+];
 
 class NavigationFrame extends React.Component {
     constructor(props) {
@@ -9,24 +16,26 @@ class NavigationFrame extends React.Component {
         
         this.state = {
             // set initial state
-        }
+        };
     }
 
     render() {
         return (
             <div>
-                <NavigationBar />
+                <NavigationBar
+                    links={links}
+                />
                 <div>
                     {this.props.children}
                 </div>
             </div>  
-        )
+        );
     }
 }
 
 
 NavigationFrame.propTypes = {
     // proptypes
-}
+};
 
 export default NavigationFrame;
