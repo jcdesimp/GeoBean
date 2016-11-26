@@ -1,12 +1,12 @@
 "use strict";
 
 import React from 'react';
-import NavigationBar from './navigationBar';
+import NavigationBar from './subcomponents/navigationBar';
 
 let links = [
     {
         to: '/',
-        name: 'ToastDos'
+        name: 'GeoBean'
     }
 ];
 

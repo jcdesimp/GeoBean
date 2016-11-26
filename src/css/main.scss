@@ -14,7 +14,7 @@ body {}
 }
 
 .navigation-bar {
-    background-color: #007AFF;
+    background-color: #361C15;
     -webkit-box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.75);
@@ -28,7 +28,7 @@ body {}
                 transition: background-color 0.2s;
                 color: #FFFFFF;
                 &:hover {
-                    background-color: #1a88ff;
+                    background-color: #522A20;
                 }
 
                 &.active {
@@ -41,7 +41,7 @@ body {}
                     -webkit-box-shadow: inset 0px 0px 12px -7px rgba(0,0,0,0.8);
                     -moz-box-shadow: inset 0px 0px 12px -7px rgba(0,0,0,0.8);
                     box-shadow: inset 0px 0px 12px -7px rgba(0,0,0,0.8);
-                    background-color: #006fe6;
+                    background-color: #1F100C;
                 }
 
             }
