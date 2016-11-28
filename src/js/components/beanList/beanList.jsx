@@ -5,7 +5,7 @@ import BeanEntry from './subcomponents/beanEntry';
 
 const containerStyle = {
     height: "100%",
-    maxWidth: "300px",
+    
     position: "absolute",
     left: 0
 };
