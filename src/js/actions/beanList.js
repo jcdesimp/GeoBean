@@ -5,6 +5,7 @@ import { loadBeans } from '../lib/api';
 export const REQUEST_LOAD_BEANS = "REQUEST_LOAD_BEANS";
 export const SUCCESS_LOAD_BEANS = "SUCCESS_LOAD_BEANS";
 export const FAIL_LOAD_BEANS = "FAIL_LOAD_BEANS";
+export const SELECT_BEAN = "SELECT_BEAN";
 
 function failLoadBeans(err) {
     return {
@@ -38,5 +39,12 @@ export function requestLoadBeans() {
             return dispatch(successLoadBeans(beans));
             
         });
+    };
+}
+
+export function selectBean(bean_id) {
+    return {
+        type: SELECT_BEAN,
+        beanId: bean_id
     };
 }

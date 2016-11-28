@@ -73,12 +73,18 @@ body {}
 .bean-list-entry {
     transition: background-color 0.2s;
     cursor: pointer;
-    border-bottom: solid 1px #3D2018;
+    border-top: solid 1px #3D2018;
     &:last-child {
-        border-bottom: none;
+        border-bottom: solid 1px #3D2018;
     }
     &:hover {
         background-color: #755952;
+    }
+    &.selected {
+        background-color: #7A3F30;
+        -webkit-box-shadow: inset 0px 0px 7px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: inset 0px 0px 7px 0px rgba(0,0,0,0.75);
+        box-shadow: inset 0px 0px 7px 0px rgba(0,0,0,0.75);
     }
 }
 

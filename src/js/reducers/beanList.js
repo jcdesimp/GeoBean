@@ -1,13 +1,19 @@
 "use strict";
 
-import { REQUEST_LOAD_BEANS, SUCCESS_LOAD_BEANS, FAIL_LOAD_BEANS } from "../actions/beanList";
+import {
+        REQUEST_LOAD_BEANS,
+        SUCCESS_LOAD_BEANS,
+        FAIL_LOAD_BEANS,
+        SELECT_BEAN
+    } from "../actions/beanList";
 
 const defaultState = {
     fetching: false,
     loadedBeanIndex: {},
     beanOrder: [],
     fetchError: null,
-    filter: ""
+    filter: "",
+    selectedBeanId: null
 };
 
 
@@ -28,6 +34,10 @@ export default function handleAction(state = defaultState, action) {
         return Object.assign({}, state, {
             fetching: false,
             fetchError: action.error
+        });
+    case SELECT_BEAN:
+        return Object.assign({}, state, {
+            selectedBeanId: action.beanId
         });
     default:
         return state;

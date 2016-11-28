@@ -30,7 +30,15 @@ class BeanEntry extends React.Component {
     }
     render() {
         return (
-            <div className={this.props.className} style={containerStyle}>
+            <div
+                className={
+                    this.props.className
+                    + (this.props.selected ? " selected" :
+                                        "")
+                }
+                style={containerStyle}
+                onClick={this.props.onClick}
+            >
                 <div className="title" style={titleContainerStyle}>
                     <strong>{this.props.name}</strong>
                 </div>
@@ -49,11 +57,15 @@ BeanEntry.propTypes = {
     name: React.PropTypes.string,
     description: React.PropTypes.string,
     location: React.PropTypes.string,
-    className: React.PropTypes.string
+    className: React.PropTypes.string,
+    selected: React.PropTypes.bool,
+    onClick: React.PropTypes.func
 };
 
 BeanEntry.defaultProps = {
-    className: ""
+    className: "",
+    selected: false,
+    onClick: () => {}
 };
 
 

@@ -31,6 +31,8 @@ class BeanList extends React.Component {
                 name={beanData.name}
                 description={beanData.description}
                 location={beanData.location}
+                selected={this.props.selectedBeanId === beanData.id}
+                onClick={() => this.props.onBeanSelect(beanData.id)}
             />
         );
     }
@@ -51,13 +53,16 @@ class BeanList extends React.Component {
 BeanList.propTypes = {
     beanIndex: React.PropTypes.object,
     orderedBeans: React.PropTypes.arrayOf(React.PropTypes.string),
-    className: React.PropTypes.string
+    className: React.PropTypes.string,
+    onBeanSelect: React.PropTypes.func,
+    selectedBeanId: React.PropTypes.number
 };
 
 BeanList.defaultProps = {
     beanIndex: {},
     orderedBeans: [],
-    className: ""
+    className: "",
+    onBeanSelect: () => {}
 };
 
 export default BeanList;
