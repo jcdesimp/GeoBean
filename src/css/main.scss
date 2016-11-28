@@ -68,17 +68,23 @@ body {}
     transition: background-color 0.2s;
     cursor: pointer;
     border-top: solid 1px #3D2018;
+    z-index: 1;
     &:last-child {
         border-bottom: solid 1px #3D2018;
     }
     &:hover {
         background-color: #755952;
     }
-    &.selected {
+    &:active {
         background-color: #7A3F30;
         -webkit-box-shadow: inset 0px 0px 7px 0px rgba(0,0,0,0.75);
         -moz-box-shadow: inset 0px 0px 7px 0px rgba(0,0,0,0.75);
         box-shadow: inset 0px 0px 7px 0px rgba(0,0,0,0.75);
+    }
+    &.selected {
+        background-color: #7A3F30;
+        z-index: 4;
+
     }
 }
 
