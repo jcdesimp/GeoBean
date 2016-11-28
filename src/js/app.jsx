@@ -7,7 +7,8 @@ import MainView from 'components/mainView/connectedMainView';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 
-import DevTools from 'components/devTools/devTools';
+let DevTools = (process.env.NODE_ENV !== 'production') ? 
+require('components/devTools/devTools').default : f => f;
 import Store from './store';
 
 let history = syncHistoryWithStore(browserHistory, Store);
