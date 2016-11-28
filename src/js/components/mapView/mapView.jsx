@@ -36,7 +36,7 @@ class MapView extends React.Component {
 MapView.propTypes = {
     className: React.PropTypes.string,
     beanIndex: React.PropTypes.object,
-    selectedBeanId: React.PropTypes.oneOf([
+    selectedBeanId: React.PropTypes.oneOfType([
         React.PropTypes.string,
         React.PropTypes.number
     ])

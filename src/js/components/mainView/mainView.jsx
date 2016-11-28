@@ -14,7 +14,8 @@ const listContainerStyle = {
     height: "100%",
     display: "inline-block",
     left: 0,
-    width: "300px",
+    top: 0,
+    // width: "300px",
 };
 
 const mapContainerStyle = {

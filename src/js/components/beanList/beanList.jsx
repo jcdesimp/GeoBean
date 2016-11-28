@@ -5,9 +5,9 @@ import BeanEntry from './subcomponents/beanEntry';
 
 const containerStyle = {
     height: "100%",
-    
     position: "absolute",
-    left: 0
+    left: 0,
+    width: "300px"
 };
 
 const listStyle = {
