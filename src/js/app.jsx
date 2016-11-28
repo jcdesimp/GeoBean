@@ -3,6 +3,7 @@
 
 import React from 'react';
 import NavigationFrame from 'components/navigation/navigationFrame';
+import MainView from 'components/mainView/connectedMainView';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 
@@ -23,8 +24,8 @@ class App extends React.Component {
                 {process.env.NODE_ENV === 'production' ? null : <DevTools/>}
                 <Router history={history}>
                     <Route path="/" component={NavigationFrame}>
-                        <IndexRoute />
-                        
+                        <IndexRoute component={MainView}>
+                        </IndexRoute>
                     </Route>
                 </Router>
             </div>

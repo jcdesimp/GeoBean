@@ -1,6 +1,6 @@
 "use strict";
 
-const MOCK_LATENCY = 1200;
+const MOCK_LATENCY = 0;
 
 let sampleBeans = require('../../../../resources/beans');
 

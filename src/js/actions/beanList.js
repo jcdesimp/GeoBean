@@ -30,7 +30,8 @@ export function requestLoadBeans() {
         dispatch({
             type: REQUEST_LOAD_BEANS
         });
-        loadBeans((err, beans) => {
+
+        return loadBeans((err, beans) => {
             if(err) {
                 return dispatch(failLoadBeans(err));
             }

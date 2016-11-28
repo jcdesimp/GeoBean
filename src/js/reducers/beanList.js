@@ -5,6 +5,7 @@ import { REQUEST_LOAD_BEANS, SUCCESS_LOAD_BEANS, FAIL_LOAD_BEANS } from "../acti
 const defaultState = {
     fetching: false,
     loadedBeanIndex: {},
+    beanOrder: [],
     fetchError: null,
     filter: ""
 };
@@ -20,7 +21,8 @@ export default function handleAction(state = defaultState, action) {
     case SUCCESS_LOAD_BEANS:
         return Object.assign({}, state, {
             fetching: false,
-            leadedBeanIndex: action.beanIndex
+            loadedBeanIndex: action.beanIndex,
+            beanOrder: Object.keys(action.beanIndex)
         });
     case FAIL_LOAD_BEANS:
         return Object.assign({}, state, {
