@@ -1,11 +1,9 @@
-[
-    {
-        "id": 1,
-        "name": "Joe Bean Coffee Roasters",
-        "link": "",
-        "location": {
-            "lat": 14.759374598,
-            "long": -92.4562983
-        }
+[{
+    "id": 1,
+    "name": "Joe Bean Coffee Roasters",
+    "link": "http://www.joebeanroasters.com/",
+    "location": {
+        "lat": 43.150486,
+        "long": -77.5671882
     }
-]
+}]

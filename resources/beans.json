@@ -1,15 +1,61 @@
-[
-    {
-        "id": 1,
-        "name": "Gitesi",
-        "notes": "Blackberry Jam, Orange Peel, Clove Melon, Wildflowers",
-        "origin": {
-            "name": "Farm/Region name",
-            "description": "",
-            "link": "",
-            "lat": 14.759374598,
-            "long": -92.4562983
-        },
-        "shop_id": 1
-    }
-]
+[{
+    "id": 1,
+    "name": "Brazil Castelo",
+    "notes": "Green Apple, Pomegranate, Basmati Rice, Toast",
+    "origin": {
+        "name": "Sítio do Sávio",
+        "description": "",
+        "link": "http://www.cafeimports.com/beanology/view/pulped-natural-domingos-savio-lopes-sitio-savio-espirito-santos-grainpro-3387",
+        "lat": -20.643544,
+        "long": -41.203524
+    },
+    "shop_id": 1
+}, {
+    "id": 2,
+    "name": "Peru Decaf",
+    "notes": "Orange, Melon, Marshmallow, Pu-erh Tea",
+    "origin": {
+        "name": "CENFROCAFE Co-op",
+        "description": "",
+        "link": "http://coopcoffees.coop/cenfrocafe/",
+        "lat": -5.6964447,
+        "long": -78.8053608
+    },
+    "shop_id": 1
+}, {
+    "id": 3,
+    "name": "Guatemala Lake Atitlan",
+    "notes": "Almond, Rose, Cherry, Chocolate, Malt",
+    "origin": {
+        "name": "Juan Francisco's Mill",
+        "description": "",
+        "link": "http://webhost.bridgew.edu/jhayesboh/coffee/coffee-guatemala.html",
+        "lat": 14.6906713,
+        "long": -91.2025207
+    },
+    "shop_id": 1
+}, {
+    "id": 4,
+    "name": "Kenya Karimikui",
+    "notes": "Almond, Rose, Cherry, Chocolate, Malt",
+    "origin": {
+        "name": "Rung'eto Farmers Cooperative Society's Karimikui Wash Station",
+        "description": "",
+        "link": "http://www.cafeimports.com/beanology/view/aa-kii-grainpro-3154",
+        "lat": -0.5365621,
+        "long": 37.4432441
+    },
+    "shop_id": 1
+}, {
+    "id": 5,
+    "name": "Rwanda Gisenyi Coopac",
+    "notes": "Raspberry, molasses, cinnamon, buckwheat honey, lime",
+    "origin": {
+        "name": "Southern Bugoyi District of Gisenyi",
+        "description": "",
+        "link": "http://www.coopac.com/",
+        "lat": -1.699276,
+        "long": 29.265273
+    },
+    "shop_id": 1
+}]
