@@ -3,9 +3,9 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
 
-import beanList from "./beanList";
+import sideList from "./sideList";
 
 export default combineReducers({
-    beanList,
+    sideList,
     routing: routerReducer
 });

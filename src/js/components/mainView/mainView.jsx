@@ -1,7 +1,7 @@
 "use strict";
 
 import React from 'react';
-import BeanList from '../beanList/connectedBeanList';
+import SideList from '../sideList/connectedSideList';
 import MapView from '../mapView/connectedMapView';
 
 const mainViewStyle = {
@@ -34,14 +34,14 @@ class MainView extends React.Component {
     }
 
     componentWillMount() {
-        this.props.loadBeans();
+        this.props.loadShops();
     }
 
     render() {
         return (
             <div style={mainViewStyle}>
                 <div style={listContainerStyle}>
-                    <BeanList
+                    <SideList
                         className="bean-list"
                     />
                 </div>
@@ -56,8 +56,8 @@ class MainView extends React.Component {
 }
 
 MainView.propTypes = {
-    loadBeans: React.PropTypes.func,
-    isLoadingBeans: React.PropTypes.bool
+    loadShops: React.PropTypes.func,
+    isLoadingShops: React.PropTypes.bool
 };
 
 export default MainView;

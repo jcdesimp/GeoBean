@@ -64,7 +64,11 @@ body {}
     box-shadow: inset -5px 0px 7px -4px rgba(0,0,0,0.75);
 }
 
-.bean-list-entry {
+.shop-list-entry {
+
+}
+
+.bean-list-entry, .shop-list-entry {
     transition: background-color 0.2s;
     cursor: pointer;
     border-top: solid 1px #3D2018;
@@ -88,5 +92,10 @@ body {}
     }
 }
 
+.shop-marker {
+    &.selected {
+        
+    }
+}
 
 

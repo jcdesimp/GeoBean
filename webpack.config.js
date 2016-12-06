@@ -67,7 +67,8 @@ module.exports = {
     resolve: {
         extensions: ["", ".js", ".jsx", ".json"],
         alias: {
-            "components": path.resolve(__dirname, "./src/js/components")
+            "components": path.resolve(__dirname, "./src/js/components"),
+            "img": path.resolve(__dirname, "./src/img")
         }
     }
 }

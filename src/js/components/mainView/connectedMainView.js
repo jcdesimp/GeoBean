@@ -3,14 +3,14 @@
 import { connect } from 'react-redux';
 import MainView from './mainView';
 
-import { requestLoadBeans } from '../../actions/beanList';
+import { requestLoadShops } from '../../actions/sideList';
 
 const ConnectedMainView = connect(
     state => ({
-        isLoadingBeans: state.beanList.fetching
+        isLoadingShops: state.sideList.fetching
     }),
     dispatch => ({
-        loadBeans: () => dispatch(requestLoadBeans())
+        loadShops: () => dispatch(requestLoadShops())
     })
 )(MainView);
 
