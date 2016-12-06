@@ -40,13 +40,18 @@ class MapView extends React.Component {
     }
 
     render() {
+        let selectedShop = this.props.shopIndex[this.props.selectedShopId]
         return (
             <div
                 style={containerStyle}
                 className={this.props.className}
             >
                 <GoogleMap
-                    center={[43.15048, -77.5671882]}
+                    center={
+                        this.props.selectedShopId ?
+                        [selectedShop.location.lat, selectedShop.location.long] :
+                        [43.15048, -77.5671882]
+                    }
                     zoom={8}
                     bootstrapURLKeys={{key: GMAPS_API_KEY}}
                     onGoogleApiLoaded={({map, maps}) => (this.Maps = maps)}
