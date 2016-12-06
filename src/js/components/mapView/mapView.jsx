@@ -4,6 +4,7 @@ import React from 'react';
 import GoogleMap from 'google-map-react';
 
 import ShopMarker from './subcomponents/shopMarker';
+import BeanMarker from './subcomponents/beanMarker';
 
 
 
@@ -19,7 +20,12 @@ class MapView extends React.Component {
     constructor(props) {
         super(props);
 
+        this.state = {
+            flightPaths: []
+        };
+
         this.generateShopMarker = this.generateShopMarker.bind(this);
+        this.generateBeanMarker = this.generateBeanMarker.bind(this);
         
     }
 
@@ -39,8 +45,19 @@ class MapView extends React.Component {
         );
     }
 
+    generateBeanMarker(beanData) {
+        return (
+            <BeanMarker
+                className="shop-marker"
+                key={`bean_marker_${beanData.id}`}
+                lat={beanData.origin.lat}
+                lng={beanData.origin.long}
+            />
+        );
+    }
+
     render() {
-        let selectedShop = this.props.shopIndex[this.props.selectedShopId]
+        let selectedShop = this.props.shopIndex[this.props.selectedShopId];
         return (
             <div
                 style={containerStyle}
@@ -48,8 +65,8 @@ class MapView extends React.Component {
             >
                 <GoogleMap
                     center={
-                        this.props.selectedShopId ?
-                        [selectedShop.location.lat, selectedShop.location.long] :
+                        // this.props.selectedShopId ?
+                        // [selectedShop.location.lat, selectedShop.location.long] :
                         [43.15048, -77.5671882]
                     }
                     zoom={8}
@@ -59,7 +76,11 @@ class MapView extends React.Component {
                     {
                         Object.keys(this.props.shopIndex)
                         .map(k => this.generateShopMarker(this.props.shopIndex[k]))
-                    }       
+                    } 
+                    {
+                        (this.props.selectedShopId) ? 
+                        (this.props.shopIndex[this.props.selectedShopId].beans.map(this.generateBeanMarker)) : f => f
+                    }      
                 </GoogleMap>
             </div>
         );

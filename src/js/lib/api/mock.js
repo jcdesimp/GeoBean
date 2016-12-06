@@ -13,6 +13,17 @@ export function loadBeans(callback) {
 
 export function loadShops(callback) {
     return setTimeout(() => {
-        callback(null, sampleShops);
+        let shops = sampleShops.map(shop => {
+            let shopWithBeans = Object.assign({}, shop);
+            shopWithBeans["beans"] = [];
+            for(var b = 0; b < sampleBeans.length; b++) {
+                let currBean = sampleBeans[b];
+                if(currBean.shop_id === shop.id) {
+                    shopWithBeans["beans"].push(currBean);
+                }
+            }
+            return shopWithBeans;
+        });
+        callback(null, shops);
     }, MOCK_LATENCY);
 }
