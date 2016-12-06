@@ -6,4 +6,37 @@
         "lat": 43.150486,
         "long": -77.5671882
     }
+}, {
+    "id": 2,
+    "name": "Hale Coffee Roasters",
+    "link": "http://www.halecoffee.com/",
+    "location": {
+        "lat": 43.665341,
+        "long": -79.4507422
+    }
+
+}, {
+    "id": 3,
+    "name": "Notes Roastery",
+    "link": "http://www.notescoffee.com/",
+    "location": {
+        "lat": 51.514488,
+        "long": -0.080363
+    }
+}, {
+    "id": 4,
+    "name": "Georgio's Coffee Roasters",
+    "link": "http://www.georgioscoffee.com",
+    "location": {
+        "lat": 40.753277,
+        "long": -73.414250
+    }
+}, {
+    "id": 5,
+    "name": "Four Barrel Coffee",
+    "link": "http://www.fourbarrelcoffee.com/",
+    "location": {
+        "lat": 37.776511,
+        "long": -122.437790
+    }
 }]
