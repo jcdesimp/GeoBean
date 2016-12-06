@@ -5,8 +5,6 @@ import coffeeCupLogo from 'img/CoffeeCup.png';
 import coffeeCupLogoSelected from 'img/CoffeeCupSelected.png';
 
 const containerStyle = {
-    textAlign: "center",
-    margin: "0 auto",
     position: "relative"
 };
 
@@ -19,7 +17,10 @@ class ShopMarker extends React.Component {
     render() {
         let imageStyle = {
             height: this.props.selected ? "55px" : "40px",
-            cursor: "pointer"
+            cursor: "pointer",
+            position: "absolute",
+            top: "-20px",
+            left: "-20px"
         };
 
         return (
