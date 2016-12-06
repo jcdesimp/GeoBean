@@ -4,10 +4,10 @@ import React from 'react';
 import coffeeCupLogo from 'img/CoffeeCup.png';
 import coffeeCupLogoSelected from 'img/CoffeeCupSelected.png';
 
-const imageStyle = {
-    height: "50px",
-    width: "50px",
-    cursor: "pointer"
+const containerStyle = {
+    textAlign: "center",
+    margin: "0 auto",
+    position: "relative"
 };
 
 class ShopMarker extends React.Component {
@@ -17,14 +17,23 @@ class ShopMarker extends React.Component {
     }
 
     render() {
+        let imageStyle = {
+            height: this.props.selected ? "55px" : "40px",
+            cursor: "pointer"
+        };
+
         return (
-            <img
-                className={this.props.className + (this.props.selected ? " selected" : "")}
-                style={imageStyle}
-                src={this.props.selected ? coffeeCupLogoSelected : coffeeCupLogo}
-                alt="CoffeeCup"
+            <div
                 onClick={this.props.onClick}
-            />
+                style={containerStyle}
+            >
+                <img
+                    className={this.props.className + (this.props.selected ? " selected" : "")}
+                    style={imageStyle}
+                    src={this.props.selected ? coffeeCupLogoSelected : coffeeCupLogo}
+                    alt="CoffeeCup" 
+                />
+            </div>
         );
     }
 }

@@ -46,9 +46,9 @@ class MapView extends React.Component {
                 className={this.props.className}
             >
                 <GoogleMap
+                    center={[43.15048, -77.5671882]}
+                    zoom={8}
                     bootstrapURLKeys={{key: GMAPS_API_KEY}}
-                    center={[59.938043, 30.337157]}
-                    zoom={9}
                     onGoogleApiLoaded={({map, maps}) => (this.Maps = maps)}
                 >
                     {

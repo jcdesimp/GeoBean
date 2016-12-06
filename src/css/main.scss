@@ -93,8 +93,9 @@ body {}
 }
 
 .shop-marker {
+    transition: height 0.4s;
     &.selected {
-        
+
     }
 }
 
