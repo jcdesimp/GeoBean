@@ -26,6 +26,7 @@ class MapView extends React.Component {
 
         this.generateShopMarker = this.generateShopMarker.bind(this);
         this.generateBeanMarker = this.generateBeanMarker.bind(this);
+        this.updateMapInternals = this.updateMapInternals.bind(this);
         
     }
 
@@ -56,6 +57,50 @@ class MapView extends React.Component {
         );
     }
 
+    componentWillReceiveProps(nextProps) {
+        
+        if(!this.Maps) {
+            return;
+        }
+
+        if(this.props.selectedShopId !== nextProps.selectedShopId) {
+            let newFlightPaths = [];
+
+            for(var i = 0; i < this.state.flightPaths.length; i++) {
+                this.state.flightPaths[i].setMap(null);
+            }
+
+            if(!nextProps.selectedShopId) {
+                return;
+            }
+
+            let selectedShop = nextProps.shopIndex[nextProps.selectedShopId];
+
+            for(var b = 0; b < selectedShop.beans.length; b++) {
+                let currBean = selectedShop.beans[b];
+                newFlightPaths.push(new this.Maps.Polyline({
+                    path: [
+                        {lat: selectedShop.location.lat, lng: selectedShop.location.long},
+                        {lat: currBean.origin.lat, lng: currBean.origin.long}
+                    ],
+                    strokeColor: '#663300',
+                    strokeOpacity: 1.0,
+                    strokeWeight: 3,
+                    geodesic: true,
+                    map: this.Map
+                }));
+            }
+
+            this.setState({
+                flightPaths: newFlightPaths
+            });
+        }
+    }
+
+    updateMapInternals() {
+
+    }
+
     render() {
         let selectedShop = this.props.shopIndex[this.props.selectedShopId];
         return (
@@ -71,7 +116,7 @@ class MapView extends React.Component {
                     }
                     zoom={8}
                     bootstrapURLKeys={{key: GMAPS_API_KEY}}
-                    onGoogleApiLoaded={({map, maps}) => (this.Maps = maps)}
+                    onGoogleApiLoaded={({map, maps}) => ((this.Maps = maps) && (this.Map = map))}
                 >
                     {
                         Object.keys(this.props.shopIndex)
