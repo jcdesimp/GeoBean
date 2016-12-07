@@ -5,6 +5,7 @@
         "origin": {
             "name": "Sítio do Sávio",
             "description": "",
+            "image": "",
             "link": "http://www.cafeimports.com/beanology/view/pulped-natural-domingos-savio-lopes-sitio-savio-espirito-santos-grainpro-3387",
             "lat": -20.643544,
             "long": -41.203524
@@ -17,6 +18,7 @@
         "origin": {
             "name": "CENFROCAFE Co-op",
             "description": "",
+            "image": "",
             "link": "http://coopcoffees.coop/cenfrocafe/",
             "lat": -5.6964447,
             "long": -78.8053608
@@ -29,6 +31,7 @@
         "origin": {
             "name": "Juan Francisco's Mill",
             "description": "",
+            "image": "",
             "link": "http://webhost.bridgew.edu/jhayesboh/coffee/coffee-guatemala.html",
             "lat": 14.6906713,
             "long": -91.2025207
@@ -41,6 +44,7 @@
         "origin": {
             "name": "Rung'eto Farmers Cooperative Society's Karimikui Wash Station",
             "description": "",
+            "image": "",
             "link": "http://www.cafeimports.com/beanology/view/aa-kii-grainpro-3154",
             "lat": -0.5365621,
             "long": 37.4432441
@@ -53,6 +57,7 @@
         "origin": {
             "name": "Southern Bugoyi District of Gisenyi",
             "description": "",
+            "image": "",
             "link": "http://www.coopac.com/",
             "lat": -1.699276,
             "long": 29.265273
@@ -65,6 +70,7 @@
         "origin": {
             "name": "Murago washing station",
             "description": "",
+            "image": "",
             "link": "http://www.npr.org/sections/thesalt/2012/11/07/164347078/meet-four-african-women-who-are-changing-the-face-of-coffee",
             "lat": -2.840656,
             "long": 30.3505373
@@ -77,6 +83,7 @@
         "origin": {
             "name": "Haraaz Mountains of Northwestern Yemen",
             "description": "",
+            "image": "",
             "link": "https://keancoffee.wordpress.com/2011/06/21/yemen-haraazi-supreme-a-coffee-pictorial-from-martin-diedrich/",
             "lat": 15.612004,
             "long": 43.642944
@@ -89,6 +96,7 @@
         "origin": {
             "name": "Los Alpes",
             "description": "",
+            "image": "",
             "link": "http://www.coffee-resources.com/farallonesl-los-alpes-excelso-antioquia-single-estate-1/",
             "lat": 5.849444,
             "long": -76.020278
