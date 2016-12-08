@@ -75,6 +75,16 @@ body {
     }
 }
 
+.logo-container {
+    background-color: $primaryColor;
+    text-align: center;
+    padding: 5px;
+    & img {
+        height: 45px;
+        cursor: pointer;
+    }
+}
+
 .shop-list, .bean-list {
     background-color: $offPrimaryColor;
     color: #FFFFFF;

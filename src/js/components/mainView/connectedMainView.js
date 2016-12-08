@@ -3,7 +3,7 @@
 import { connect } from 'react-redux';
 import MainView from './mainView';
 
-import { requestLoadShops, requestLoadBeans } from '../../actions/sideList';
+import { deselectShop, requestLoadShops, requestLoadBeans } from '../../actions/sideList';
 
 const ConnectedMainView = connect(
     state => ({
@@ -13,7 +13,8 @@ const ConnectedMainView = connect(
     }),
     dispatch => ({
         loadShops: () => dispatch(requestLoadShops()),
-        loadBeans: () => dispatch(requestLoadBeans())
+        loadBeans: () => dispatch(requestLoadBeans()),
+        clearSelections: () => dispatch(deselectShop())
     })
 )(MainView);
 

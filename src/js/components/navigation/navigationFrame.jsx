@@ -22,9 +22,9 @@ class NavigationFrame extends React.Component {
     render() {
         return (
             <div style={{height: "100vh"}}>
-                <NavigationBar
-                    links={links}
-                />
+                {/*<NavigationBar
+                                    links={links}
+                                />*/}
                 {this.props.children}
                 
             </div>  

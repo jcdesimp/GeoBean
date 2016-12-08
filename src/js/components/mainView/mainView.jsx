@@ -9,7 +9,8 @@ import logoImage from 'img/geoBeanLogo.png';
 
 const mainViewStyle = {
     width: '100%',
-    height: 'calc(100% - 64px)',
+    // height: 'calc(100% - 64px)',
+    height: '100%',
     overflow: "hidden"
 };
 
@@ -49,6 +50,13 @@ class MainView extends React.Component {
         return (
             <div style={mainViewStyle}>
                 <div style={listContainerStyle}>
+                    <div className="logo-container">
+                        <img
+                            src={logoImage}
+                            alt="GeoBean"
+                            onClick={this.props.clearSelections}
+                        />
+                    </div>
                     {
                         this.props.shopSelected ?
                         (
@@ -84,7 +92,8 @@ MainView.propTypes = {
     loadBeans: React.PropTypes.func,
     isLoadingShops: React.PropTypes.bool,
     shopSelected: React.PropTypes.bool,
-    beanSelected: React.PropTypes.bool
+    beanSelected: React.PropTypes.bool,
+    clearSelections: React.PropTypes.func
 };
 
 export default MainView;
