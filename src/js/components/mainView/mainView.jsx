@@ -57,6 +57,7 @@ class MainView extends React.Component {
                             onClick={this.props.clearSelections}
                         />
                     </div>
+                    <div style={{height: "calc(100% - 55px)"}}>
                     {
                         this.props.shopSelected ?
                         (
@@ -76,6 +77,7 @@ class MainView extends React.Component {
                             />
                         )
                     }
+                    </div>
                 </div>
                 <div style={mapContainerStyle}>
                     <MapView
