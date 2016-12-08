@@ -7,7 +7,7 @@ const containerStyle = {
     height: "100%",
     position: "absolute",
     left: 0,
-    width: "300px"
+    width: "100%"
 };
 
 const listStyle = {

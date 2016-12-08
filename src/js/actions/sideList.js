@@ -11,6 +11,10 @@ export const SUCCESS_LOAD_SHOPS = "SUCCESS_LOAD_SHOPS";
 export const FAIL_LOAD_SHOPS = "FAIL_LOAD_SHOPS";
 
 export const SELECT_SHOP = "SELECT_SHOP";
+export const DESELECT_SHOP = "DESELECT_SHOP";
+
+export const SELECT_BEAN = "SELECT_BEAN";
+export const DESELECT_BEAN = "DESELECT_BEAN";
 
 function failLoadBeans(err) {
     return {
@@ -84,5 +88,24 @@ export function selectShop(shopId) {
     return {
         type: SELECT_SHOP,
         shopId
+    };
+}
+
+export function deselectShop() {
+    return {
+        type: DESELECT_SHOP
+    };
+}
+
+export function selectBean(beanId) {
+    return {
+        type: SELECT_BEAN,
+        beanId
+    };
+}
+
+export function deselectBean() {
+    return {
+        type: DESELECT_BEAN
     };
 }

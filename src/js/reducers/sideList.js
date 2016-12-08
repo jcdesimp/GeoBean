@@ -7,7 +7,10 @@ import {
         REQUEST_LOAD_SHOPS,
         SUCCESS_LOAD_SHOPS,
         FAIL_LOAD_SHOPS,
-        SELECT_SHOP
+        SELECT_SHOP,
+        DESELECT_SHOP,
+        SELECT_BEAN,
+        DESELECT_BEAN
     } from "../actions/sideList";
 
 const defaultState = {
@@ -20,7 +23,8 @@ const defaultState = {
     shopOrder: [],
     selectedShopId: null,
     fetchShopsError: null,
-    filter: ""
+    filter: "",
+    selectedBeanId: null
 };
 
 
@@ -59,7 +63,21 @@ export default function handleAction(state = defaultState, action) {
         });
     case SELECT_SHOP:
         return Object.assign({}, state, {
-            selectedShopId: action.shopId
+            selectedShopId: action.shopId,
+            selectedBeanId: null
+        });
+    case DESELECT_SHOP:
+        return Object.assign({}, state, {
+            selectedShopId: null,
+            selectedBeanId: null
+        });
+    case SELECT_BEAN:
+        return Object.assign({}, state, {
+            selectedBeanId: action.beanId
+        });
+    case DESELECT_BEAN:
+        return Object.assign({}, state, {
+            selectedBeanId: null
         });
     default:
         return state;

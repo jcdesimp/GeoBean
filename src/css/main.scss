@@ -64,9 +64,6 @@ body {}
     box-shadow: inset -5px 0px 7px -4px rgba(0,0,0,0.75);
 }
 
-.shop-list-entry {
-
-}
 
 .bean-list-entry, .shop-list-entry {
     transition: background-color 0.2s;
@@ -96,6 +93,44 @@ body {}
     transition: height 0.4s;
     &.selected {
 
+    }
+}
+
+.back-bar {
+    background-color: #42322E;
+    height: 50px;
+    color: #ffffff;
+    & > button {
+        color: #ffffff;
+        background: none;
+        border: none;
+        cursor: pointer;
+        &:hover {
+            background-color: #755952;
+        }
+        &:active {
+            background-color: #7A3F30;
+            -webkit-box-shadow: inset 0px 0px 7px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: inset 0px 0px 7px 0px rgba(0,0,0,0.75);
+            box-shadow: inset 0px 0px 7px 0px rgba(0,0,0,0.75);
+        }
+
+    }
+}
+
+.shop-detail {
+    & .shop-detail-image {
+        -webkit-box-shadow: inset 0px 41px 25px -29px rgba(0,0,0,0.75);
+        -moz-box-shadow: inset 0px 41px 25px -29px rgba(0,0,0,0.75);
+        box-shadow: inset 0px 41px 25px -29px rgba(0,0,0,0.75);
+    }
+
+    & ul {
+        list-style: none;
+        padding: 0;
+    }
+    & .shop-detail-content {
+        margin-top: 50px;
     }
 }
 

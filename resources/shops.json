@@ -2,6 +2,7 @@
     "id": 1,
     "name": "Joe Bean Coffee Roasters",
     "link": "http://www.joebeanroasters.com/",
+    "image": "http://www.joebeanroasters.com/wp-content/uploads/2013/12/exterior.jpg",
     "location": {
         "lat": 43.150486,
         "long": -77.5671882

@@ -50,9 +50,11 @@ class MapView extends React.Component {
         return (
             <BeanMarker
                 className="shop-marker"
+                selected={this.props.selectedBeanId === beanData.id}
                 key={`bean_marker_${beanData.id}`}
                 lat={beanData.origin.lat}
                 lng={beanData.origin.long}
+                onClick={() => this.props.onBeanMarkerClick(beanData.id)}
             />
         );
     }
@@ -63,7 +65,7 @@ class MapView extends React.Component {
             return;
         }
 
-        if(this.props.selectedShopId !== nextProps.selectedShopId) {
+        if(this.props.selectedShopId !== nextProps.selectedShopId || this.props.selectedBeanId !== nextProps.selectedBeanId) {
             let newFlightPaths = [];
 
             for(var i = 0; i < this.state.flightPaths.length; i++) {
@@ -83,7 +85,7 @@ class MapView extends React.Component {
                         {lat: selectedShop.location.lat, lng: selectedShop.location.long},
                         {lat: currBean.origin.lat, lng: currBean.origin.long}
                     ],
-                    strokeColor: '#663300',
+                    strokeColor: ((nextProps.selectedBeanId === currBean.id) ? '#f7ce2a' : '#663300'),
                     strokeOpacity: 1.0,
                     strokeWeight: 3,
                     geodesic: true,
@@ -139,12 +141,18 @@ MapView.propTypes = {
         React.PropTypes.string,
         React.PropTypes.number
     ]),
-    onShopMarkerClick: React.PropTypes.func
+    selectedBeanId: React.PropTypes.oneOfType([
+        React.PropTypes.string,
+        React.PropTypes.number
+    ]),
+    onShopMarkerClick: React.PropTypes.func,
+    onBeanMarkerClick: React.PropTypes.func
 };
 
 MapView.defaultProps = {
     className: "",
-    onShopMarkerClick: () => {}
+    onShopMarkerClick: () => {},
+    onBeanMarkerClick: () => {}
 };
 
 export default MapView;

@@ -3,10 +3,12 @@
 import React from 'react';
 import SideList from '../sideList/connectedSideList';
 import MapView from '../mapView/connectedMapView';
+import ShopDetail from '../shopDetail/connectedShopDetail';
 
 const mainViewStyle = {
     width: '100%',
-    height: 'calc(100% - 48px)'
+    height: 'calc(100% - 48px)',
+    overflow: "hidden"
 };
 
 const listContainerStyle = {
@@ -15,13 +17,13 @@ const listContainerStyle = {
     display: "inline-block",
     left: 0,
     top: 0,
-    // width: "300px",
+    width: "350px",
 };
 
 const mapContainerStyle = {
     position: "relative",
     height: "100%",
-    width: "calc(100% - 300px)",
+    width: "calc(100% - 350px)",
     float: "right",
     display: "inline-block",
     right: 0
@@ -35,15 +37,28 @@ class MainView extends React.Component {
 
     componentWillMount() {
         this.props.loadShops();
+        this.props.loadBeans();
     }
 
     render() {
+
+
+
         return (
             <div style={mainViewStyle}>
                 <div style={listContainerStyle}>
-                    <SideList
-                        className="bean-list"
-                    />
+                    {
+                        this.props.shopSelected ?
+                        (
+                            <ShopDetail
+                                className="shop-detail"
+                            />
+                        ) : (
+                            <SideList
+                                className="bean-list"
+                            />
+                        )
+                    }
                 </div>
                 <div style={mapContainerStyle}>
                     <MapView
@@ -57,7 +72,10 @@ class MainView extends React.Component {
 
 MainView.propTypes = {
     loadShops: React.PropTypes.func,
-    isLoadingShops: React.PropTypes.bool
+    loadBeans: React.PropTypes.func,
+    isLoadingShops: React.PropTypes.bool,
+    shopSelected: React.PropTypes.bool,
+    beanSelected: React.PropTypes.bool
 };
 
 export default MainView;

@@ -3,15 +3,17 @@
 import { connect } from 'react-redux';
 
 import MapView from './mapView';
-import { selectShop } from '../../actions/sideList';
+import { selectShop, selectBean } from '../../actions/sideList';
 
 const ConnectedMapView = connect(
     state => ({
         shopIndex: state.sideList.loadedShopIndex,
-        selectedShopId: state.sideList.selectedShopId 
+        selectedShopId: state.sideList.selectedShopId,
+        selectedBeanId: state.sideList.selectedBeanId 
     }),
     dispatch => ({
-        onShopMarkerClick: shopId => dispatch(selectShop(shopId))
+        onShopMarkerClick: shopId => dispatch(selectShop(shopId)),
+        onBeanMarkerClick: beanId => dispatch(selectBean(beanId))
     })
 )(MapView);
 
