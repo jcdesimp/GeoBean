@@ -5,10 +5,11 @@ import SideList from '../sideList/connectedSideList';
 import MapView from '../mapView/connectedMapView';
 import ShopDetail from '../shopDetail/connectedShopDetail';
 import BeanDetail from '../beanDetail/connectedBeanDetail';
+import logoImage from 'img/geoBeanLogo.png';
 
 const mainViewStyle = {
     width: '100%',
-    height: 'calc(100% - 48px)',
+    height: 'calc(100% - 64px)',
     overflow: "hidden"
 };
 

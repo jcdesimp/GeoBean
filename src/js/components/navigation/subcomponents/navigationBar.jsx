@@ -2,10 +2,12 @@
 
 import React from 'react';
 import  { Link } from 'react-router';
+import logoImage from 'img/geoBeanLogo.png';
 
 const navigationBarStyle = {
     display: "block",
-    padding: "0 50px"
+    padding: "0 50px",
+    // textAlign: "center"
 };
 
 const navigationListStyle = {
@@ -20,7 +22,7 @@ const navigationLinkStyle = {
     cursor: "pointer",
     display: "block",
     height: "100%",
-    padding: "15px 10px",
+    padding: "5px 10px",
     textDecoration: "none",
     textAlign: "center",
     WebkitUserSelect: "none", /* webkit (safari, chrome) browsers */
@@ -41,7 +43,9 @@ class NavigationBar extends React.Component {
     createNavigationLink(linkData) {
         return (
             <li style={{display: 'inline-block'}} key={linkData.name}>
-                <Link style={navigationLinkStyle} to={linkData.to}>{linkData.name}</Link>
+                <Link style={navigationLinkStyle} to={linkData.to}>
+                    <img style={{height: "50px"}} src={logoImage} alt="GeoBean"/>
+                </Link>
             </li>
         );
     }
