@@ -2,10 +2,29 @@
 
 // Global styles
 
+$primaryColor: #361C15;
+$primaryColorHovered: #522A20;
+$primaryColorActive: #1F100C;
+
+$offPrimaryColor: #42322E;
+$offPrimaryColorHovered: #42322E;
+
+$linkHoverColor: #755952;
+$linkActiveColor: #7A3F30;
+
+$colorYellow: #ffd900;
+$colorLightGray: #f3f3f3;
+
+
+
+$primaryFont: 'Droid Sans', sans-serif;
+$headingFont: 'Playfair Display', serif;
 
 html {}
 
-body {}
+body {
+    font-family: $primaryFont;
+}
 
 
 #app-container {
@@ -14,7 +33,8 @@ body {}
 }
 
 .navigation-bar {
-    background-color: #361C15;
+    background-color: $primaryColor;
+    // background-image: url('../img/beanTile.png');
     -webkit-box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.75);
@@ -28,7 +48,7 @@ body {}
                 transition: background-color 0.2s;
                 color: #FFFFFF;
                 &:hover {
-                    background-color: #522A20;
+                    background-color: $primaryColorHovered;
                 }
 
                 &.active {
@@ -41,7 +61,7 @@ body {}
                     -webkit-box-shadow: inset 0px 0px 12px -7px rgba(0,0,0,0.8);
                     -moz-box-shadow: inset 0px 0px 12px -7px rgba(0,0,0,0.8);
                     box-shadow: inset 0px 0px 12px -7px rgba(0,0,0,0.8);
-                    background-color: #1F100C;
+                    background-color: $primaryColorActive;
                 }
 
             }
@@ -57,7 +77,7 @@ body {}
 }
 
 .shop-list, .bean-list {
-    background-color: #42322E;
+    background-color: $offPrimaryColor;
     color: #FFFFFF;
     -webkit-box-shadow: inset -5px 0px 7px -4px rgba(0,0,0,0.75);
     -moz-box-shadow: inset -5px 0px 7px -4px rgba(0,0,0,0.75);
@@ -68,22 +88,22 @@ body {}
 .bean-list-entry, .shop-list-entry {
     transition: background-color 0.2s;
     cursor: pointer;
-    border-top: solid 1px #3D2018;
+    border-top: solid 1px $primaryColor;
     z-index: 1;
     &:last-child {
-        border-bottom: solid 1px #3D2018;
+        border-bottom: solid 1px $primaryColor;
     }
     &:hover {
-        background-color: #755952;
+        background-color: $linkHoverColor;
     }
     &:active {
-        background-color: #7A3F30;
+        background-color: $linkActiveColor;
         -webkit-box-shadow: inset 0px 0px 7px 0px rgba(0,0,0,0.75);
         -moz-box-shadow: inset 0px 0px 7px 0px rgba(0,0,0,0.75);
         box-shadow: inset 0px 0px 7px 0px rgba(0,0,0,0.75);
     }
     &.selected {
-        background-color: #7A3F30;
+        background-color: $linkActiveColor;
         z-index: 4;
 
     }
@@ -97,7 +117,7 @@ body {}
 }
 
 .back-bar {
-    background-color: #42322E;
+    background-color: $offPrimaryColor;
     height: 50px;
     color: #ffffff;
     & > button {
@@ -106,10 +126,10 @@ body {}
         border: none;
         cursor: pointer;
         &:hover {
-            background-color: #755952;
+            background-color: $offPrimaryColorHovered;
         }
         &:active {
-            background-color: #7A3F30;
+            background-color: $primaryColorActive;
             -webkit-box-shadow: inset 0px 0px 7px 0px rgba(0,0,0,0.75);
             -moz-box-shadow: inset 0px 0px 7px 0px rgba(0,0,0,0.75);
             box-shadow: inset 0px 0px 7px 0px rgba(0,0,0,0.75);
@@ -118,8 +138,44 @@ body {}
     }
 }
 
-.shop-detail {
-    & .shop-detail-image {
+.more-info-link {
+    text-decoration: none;
+    display: block;
+    margin: 15px;
+    padding: 10px 5px;
+    text-align: center;
+    background-color: $primaryColor;
+    color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid $colorYellow;
+    &:hover {
+        background-color: $linkActiveColor;
+    }
+
+    &:active {
+        background-color: $primaryColorHovered;
+        -webkit-box-shadow: inset 0px 0px 7px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: inset 0px 0px 7px 0px rgba(0,0,0,0.75);
+        box-shadow: inset 0px 0px 7px 0px rgba(0,0,0,0.75);
+    }
+}
+
+.shop-detail, .bean-detail {
+
+    color: #ffffff;
+    background-color: $offPrimaryColor;
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: $headingFont;
+        color: $colorYellow;
+        text-align: center;
+    }
+
+    & .sub-title {
+        text-align: left;
+    }
+
+    & .shop-detail-image, .bean-detail-image {
         -webkit-box-shadow: inset 0px 41px 25px -29px rgba(0,0,0,0.75);
         -moz-box-shadow: inset 0px 41px 25px -29px rgba(0,0,0,0.75);
         box-shadow: inset 0px 41px 25px -29px rgba(0,0,0,0.75);
@@ -129,25 +185,8 @@ body {}
         list-style: none;
         padding: 0;
     }
-    & .shop-detail-content {
+    & .shop-detail-content, & .bean-detail-content {
         margin-top: 50px;
     }
 }
-
-.bean-detail {
-    & .bean-detail-image {
-        -webkit-box-shadow: inset 0px 41px 25px -29px rgba(0,0,0,0.75);
-        -moz-box-shadow: inset 0px 41px 25px -29px rgba(0,0,0,0.75);
-        box-shadow: inset 0px 41px 25px -29px rgba(0,0,0,0.75);
-    }
-
-    & ul {
-        list-style: none;
-        padding: 0;
-    }
-    & .bean-detail-content {
-        margin-top: 50px;
-    }
-}
-
 

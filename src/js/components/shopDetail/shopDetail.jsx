@@ -77,11 +77,13 @@ class ShopDetail extends React.Component {
                             >
                             </div>
                         ) : undefined}
-                        <h2>{this.props.shopData.name}</h2>
+                        <h1>{this.props.shopData.name}</h1>
                         <a
+                            className="more-info-link"
                             href={this.props.shopData.link}
                             target="_blank"
                         >More Info</a>
+                        <h2 className="sub-title">Coffee Selection:</h2>
                         <ul>
                             {this.props.shopData.beans.map(this.generateBeanEntry)}
                         </ul>

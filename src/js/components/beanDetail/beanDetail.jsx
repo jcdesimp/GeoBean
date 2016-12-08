@@ -63,10 +63,11 @@ class BeanDetail extends React.Component {
                         ) : undefined}
                         <h1>{this.props.beanData.name}</h1>
                         <p>{this.props.beanData.notes}</p>
-                        <h2>Origin</h2>
-                        <h3>{this.props.beanData.origin.name}</h3>
+                        <h2 className="sub-title">Origin</h2>
+                        <h3 className="sub-title">{this.props.beanData.origin.name}</h3>
                         <p>{this.props.beanData.origin.description}</p>
                         <a
+                            className="more-info-link"
                             href={this.props.beanData.origin.link}
                             target="_blank"
                         >More Info</a>
