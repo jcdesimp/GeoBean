@@ -8,6 +8,7 @@ import { selectShop, selectBean } from '../../actions/sideList';
 const ConnectedMapView = connect(
     state => ({
         shopIndex: state.sideList.loadedShopIndex,
+        beanIndex: state.sideList.loadedBeanIndex,
         selectedShopId: state.sideList.selectedShopId,
         selectedBeanId: state.sideList.selectedBeanId 
     }),

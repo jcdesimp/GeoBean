@@ -8,7 +8,8 @@ import { requestLoadShops, requestLoadBeans } from '../../actions/sideList';
 const ConnectedMainView = connect(
     state => ({
         isLoadingShops: state.sideList.fetching,
-        shopSelected: (state.sideList.selectedShopId != null)
+        shopSelected: (state.sideList.selectedShopId != null),
+        beanSelected: (state.sideList.selectedBeanId != null),
     }),
     dispatch => ({
         loadShops: () => dispatch(requestLoadShops()),

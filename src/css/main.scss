@@ -56,7 +56,7 @@ body {}
     }
 }
 
-.bean-list {
+.shop-list, .bean-list {
     background-color: #42322E;
     color: #FFFFFF;
     -webkit-box-shadow: inset -5px 0px 7px -4px rgba(0,0,0,0.75);
@@ -130,6 +130,22 @@ body {}
         padding: 0;
     }
     & .shop-detail-content {
+        margin-top: 50px;
+    }
+}
+
+.bean-detail {
+    & .bean-detail-image {
+        -webkit-box-shadow: inset 0px 41px 25px -29px rgba(0,0,0,0.75);
+        -moz-box-shadow: inset 0px 41px 25px -29px rgba(0,0,0,0.75);
+        box-shadow: inset 0px 41px 25px -29px rgba(0,0,0,0.75);
+    }
+
+    & ul {
+        list-style: none;
+        padding: 0;
+    }
+    & .bean-detail-content {
         margin-top: 50px;
     }
 }

@@ -1,7 +1,6 @@
 "use strict";
 
 import React from 'react';
-import BeanEntry from './subcomponents/beanEntry';
 
 const containerStyle = {
     width: "100%",
@@ -28,26 +27,11 @@ const backButtonStyle = {
 };
 
 
-class ShopDetail extends React.Component {
+class BeanDetail extends React.Component {
     constructor(props) {
         super(props);
-
-        this.generateBeanEntry = this.generateBeanEntry.bind(this);
     }
 
-    generateBeanEntry(beanInfo) {
-        return (
-            <li key={`bean_entry_${beanInfo.id}`}>
-                <BeanEntry
-                    onClick={() => this.props.selectBean(beanInfo.id)}
-                    className="bean-list-entry"
-                    name={beanInfo.name}
-                    description={beanInfo.notes}
-                    location={beanInfo.origin.name}
-                />
-            </li>
-        );
-    }
 
     render() {
         return (
@@ -59,32 +43,33 @@ class ShopDetail extends React.Component {
                     <div className="back-bar" style={backBarStyle}>
                         <button
                             style={backButtonStyle}
-                            onClick={this.props.deselectShop}
+                            onClick={this.props.deselectBean}
                         >
-                            {'< Shops'}
+                            {'< Shop Info'}
                         </button>
                     </div>
                     <div className={`${this.props.className}-content`}>
-                        {this.props.shopData.image ? (
+                        {this.props.beanData.origin.image ? (
                             <div
                                 className={`${this.props.className}-image`}
                                 style={
                                     Object.assign({}, imageStyle, {
-                                        backgroundImage: `url(${this.props.shopData.image})`
+                                        backgroundImage: `url(${this.props.beanData.origin.image})`
                                     })
                                 }
-                                alt="Shop Image"
+                                alt="Bean Image"
                             >
                             </div>
                         ) : undefined}
-                        <h2>{this.props.shopData.name}</h2>
+                        <h1>{this.props.beanData.name}</h1>
+                        <p>{this.props.beanData.notes}</p>
+                        <h2>Origin</h2>
+                        <h3>{this.props.beanData.origin.name}</h3>
+                        <p>{this.props.beanData.origin.description}</p>
                         <a
-                            href={this.props.shopData.link}
+                            href={this.props.beanData.origin.link}
                             target="_blank"
                         >More Info</a>
-                        <ul>
-                            {this.props.shopData.beans.map(this.generateBeanEntry)}
-                        </ul>
                     </div>
         
             </div>
@@ -92,17 +77,15 @@ class ShopDetail extends React.Component {
     }
 }
 
-ShopDetail.propTypes = {
-    shopData: React.PropTypes.object,
-    deselectShop: React.PropTypes.func,
-    selectBean: React.PropTypes.func,
+BeanDetail.propTypes = {
+    beanData: React.PropTypes.object,
+    deselectBean: React.PropTypes.func,
     className: React.PropTypes.string
 };
 
-ShopDetail.defaultProps = {
-    deselectShop: () => {},
-    selectBean: () => {},
+BeanDetail.defaultProps = {
+    deselectBean: () => {},
     className: ""
 };
 
-export default ShopDetail;
+export default BeanDetail;

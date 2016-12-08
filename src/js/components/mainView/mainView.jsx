@@ -4,6 +4,7 @@ import React from 'react';
 import SideList from '../sideList/connectedSideList';
 import MapView from '../mapView/connectedMapView';
 import ShopDetail from '../shopDetail/connectedShopDetail';
+import BeanDetail from '../beanDetail/connectedBeanDetail';
 
 const mainViewStyle = {
     width: '100%',
@@ -50,12 +51,19 @@ class MainView extends React.Component {
                     {
                         this.props.shopSelected ?
                         (
-                            <ShopDetail
-                                className="shop-detail"
-                            />
+                            this.props.beanSelected ?
+                            (
+                                <BeanDetail
+                                    className="bean-detail"
+                                />
+                            ) : (
+                                <ShopDetail
+                                    className="shop-detail"
+                                />
+                            )
                         ) : (
                             <SideList
-                                className="bean-list"
+                                className="shop-list"
                             />
                         )
                     }

@@ -104,19 +104,36 @@ class MapView extends React.Component {
     }
 
     render() {
-        let selectedShop = this.props.shopIndex[this.props.selectedShopId];
+        
         return (
             <div
                 style={containerStyle}
                 className={this.props.className}
             >
                 <GoogleMap
-                    center={
-                        // this.props.selectedShopId ?
-                        // [selectedShop.location.lat, selectedShop.location.long] :
-                        [43.15048, -77.5671882]
+                    center={(() => {
+
+                        if(this.props.selectedShopId) {
+                            let selectedShop = this.props.shopIndex[this.props.selectedShopId];
+                            if(this.props.selectedBeanId) {
+                                let selectedBean = this.props.beanIndex[this.props.selectedBeanId];
+                                return [selectedBean.origin.lat, selectedBean.origin.long];
+                            }
+                            return [selectedShop.location.lat, selectedShop.location.long];
+                        }
+
+                        return [38.6368382, -40.5953046];
+
+
+                    })()}
+                    zoom={
+                        this.props.selectedShopId ?
+                        (
+                            this.props.selectedBeanId ? (4) :
+                            (3)
+                        ) :
+                        (3)
                     }
-                    zoom={8}
                     bootstrapURLKeys={{key: GMAPS_API_KEY}}
                     onGoogleApiLoaded={({map, maps}) => ((this.Maps = maps) && (this.Map = map))}
                 >
@@ -137,6 +154,7 @@ class MapView extends React.Component {
 MapView.propTypes = {
     className: React.PropTypes.string,
     shopIndex: React.PropTypes.object,
+    beanIndex: React.PropTypes.object,
     selectedShopId: React.PropTypes.oneOfType([
         React.PropTypes.string,
         React.PropTypes.number
