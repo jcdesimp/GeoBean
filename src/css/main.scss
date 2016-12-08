@@ -7,7 +7,7 @@ $primaryColorHovered: #522A20;
 $primaryColorActive: #1F100C;
 
 $offPrimaryColor: #42322E;
-$offPrimaryColorHovered: #42322E;
+$offPrimaryColorHovered: #755952;
 
 $linkHoverColor: #755952;
 $linkActiveColor: #7A3F30;
@@ -34,7 +34,6 @@ body {
 
 .navigation-bar {
     background-color: $primaryColor;
-    // background-image: url('../img/beanTile.png');
     -webkit-box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.75);
