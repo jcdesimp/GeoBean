@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 /**
  * Root entry file
  *

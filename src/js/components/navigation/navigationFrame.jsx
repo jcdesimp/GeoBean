@@ -21,7 +21,7 @@ class NavigationFrame extends React.Component {
 
     render() {
         return (
-            <div style={{height: "100vh"}}>
+            <div style={{height: "calc(100vh - 38px)"}}>
                 {/*<NavigationBar
                                     links={links}
                                 />*/}

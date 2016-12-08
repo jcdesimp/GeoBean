@@ -10,6 +10,20 @@
 	</head>
  	<body>
 	    <div id="app-container"></div>
+	    <div id="footer">
+	    	Created By
+	    	<a href="https://github.com/jcdesimp">
+		    	<strong>
+		    		Joe DeSimpliciis
+		    	</strong> 
+	    	</a>
+	    	and
+	    	<a href="https://github.com/jcdesimp">
+		    	<strong>
+		    		Kayla Davis
+		    	</strong>
+	    	</a>
+	    </div>
 	    <% for (var js in htmlWebpackPlugin.files.js) { 
 			%><script type="text/javascript" src="<%= htmlWebpackPlugin.files.js[js] %>"></script><%
 		} %>
