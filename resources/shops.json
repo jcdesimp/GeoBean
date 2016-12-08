@@ -1,43 +1,61 @@
-[{
-    "id": 1,
-    "name": "Joe Bean Coffee Roasters",
-    "link": "http://www.joebeanroasters.com/",
-    "image": "http://www.joebeanroasters.com/wp-content/uploads/2013/12/exterior.jpg",
-    "location": {
-        "lat": 43.150486,
-        "long": -77.5671882
-    }
-}, {
-    "id": 2,
-    "name": "Hale Coffee Roasters",
-    "link": "http://www.halecoffee.com/",
-    "location": {
-        "lat": 43.665341,
-        "long": -79.4507422
-    }
+[
+    {
+        "id": 1,
+        "name": "Joe Bean Coffee Roasters",
+        "link": "http://www.joebeanroasters.com/",
+        "image": "http://www.joebeanroasters.com/wp-content/uploads/2013/12/exterior.jpg",
+        "location": {
+            "lat": 43.150486,
+            "long": -77.5671882
+        }
 
-}, {
-    "id": 3,
-    "name": "Notes Roastery",
-    "link": "http://www.notescoffee.com/",
-    "location": {
-        "lat": 51.514488,
-        "long": -0.080363
+    },
+    {
+        "id": 2,
+        "name": "Hale Coffee Roasters",
+        "link": "http://www.halecoffee.com/",
+        "image": "http://dfz.ryerson.ca/wp-content/uploads/2016/05/IMG_1762-2000x950.jpg",
+        "location": {
+            "lat": 43.665341,
+            "long": -79.4507422
+        }
+
+    },
+    {
+        "id": 3,
+        "name": "Notes Roastery",
+        "link": "http://www.notescoffee.com/",
+        "location": {
+            "lat": 51.514488,
+            "long": -0.080363
+        }
+    },
+    {
+        "id": 4,
+        "name": "Georgio's Coffee Roasters",
+        "link": "http://www.georgioscoffee.com",
+        "location": {
+            "lat": 40.753277,
+            "long": -73.414250
+        }
+    },
+    {
+        "id": 5,
+        "name": "Four Barrel Coffee",
+        "link": "http://www.fourbarrelcoffee.com/",
+        "location": {
+            "lat": 37.776511,
+            "long": -122.437790
+        }
+    },
+    {
+        "id": 6,
+        "name": "49th Parallel Coffee Roasters",
+        "link": "http://49thcoffee.com/",
+        "image": "https://s-media-cache-ak0.pinimg.com/originals/35/24/a8/3524a817080a102746bbfb914b8ce876.jpg",
+        "location": {
+            "lat": 45.9205873447,
+            "long": -87.654285375
+        }
     }
-}, {
-    "id": 4,
-    "name": "Georgio's Coffee Roasters",
-    "link": "http://www.georgioscoffee.com",
-    "location": {
-        "lat": 40.753277,
-        "long": -73.414250
-    }
-}, {
-    "id": 5,
-    "name": "Four Barrel Coffee",
-    "link": "http://www.fourbarrelcoffee.com/",
-    "location": {
-        "lat": 37.776511,
-        "long": -122.437790
-    }
-}]
+]
