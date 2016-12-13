@@ -16,7 +16,26 @@ const containerStyle = {
     position: "absolute"
 };
 
+function createMapOptions(maps) {
+  // next props are exposed at maps
+  // "Animation", "ControlPosition", "MapTypeControlStyle", "MapTypeId",
+  // "NavigationControlStyle", "ScaleControlStyle", "StrokePosition", "SymbolPath", "ZoomControlStyle",
+  // "DirectionsStatus", "DirectionsTravelMode", "DirectionsUnitSystem", "DistanceMatrixStatus",
+  // "DistanceMatrixElementStatus", "ElevationStatus", "GeocoderLocationType", "GeocoderStatus", "KmlLayerStatus",
+  // "MaxZoomStatus", "StreetViewStatus", "TransitMode", "TransitRoutePreference", "TravelMode", "UnitSystem"
+  return {
+    zoomControlOptions: {
+      style: maps.ZoomControlStyle.SMALL
+    },
+    mapTypeControlOptions: {
+      position: maps.ControlPosition.TOP_RIGHT
+    },
+    mapTypeControl: true
+  };
+}
+
 class MapView extends React.Component {
+
     constructor(props) {
         super(props);
 
@@ -27,7 +46,7 @@ class MapView extends React.Component {
         this.generateShopMarker = this.generateShopMarker.bind(this);
         this.generateBeanMarker = this.generateBeanMarker.bind(this);
         this.updateMapInternals = this.updateMapInternals.bind(this);
-        
+
     }
 
 
@@ -60,7 +79,7 @@ class MapView extends React.Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        
+
         if(!this.Maps) {
             return;
         }
@@ -104,7 +123,7 @@ class MapView extends React.Component {
     }
 
     render() {
-        
+
         return (
             <div
                 style={containerStyle}
@@ -136,15 +155,16 @@ class MapView extends React.Component {
                     }
                     bootstrapURLKeys={{key: GMAPS_API_KEY}}
                     onGoogleApiLoaded={({map, maps}) => ((this.Maps = maps) && (this.Map = map))}
+                    options={createMapOptions}
                 >
                     {
                         Object.keys(this.props.shopIndex)
                         .map(k => this.generateShopMarker(this.props.shopIndex[k]))
-                    } 
+                    }
                     {
-                        (this.props.selectedShopId) ? 
+                        (this.props.selectedShopId) ?
                         (this.props.shopIndex[this.props.selectedShopId].beans.map(this.generateBeanMarker)) : f => f
-                    }      
+                    }
                 </GoogleMap>
             </div>
         );
