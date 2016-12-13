@@ -106,7 +106,7 @@ class MapView extends React.Component {
                             {lat: selectedShop.location.lat, lng: selectedShop.location.long},
                             {lat: currBean.origin.lat, lng: currBean.origin.long}
                         ],
-                        strokeColor: ((nextProps.selectedBeanId === currBean.id) ? '#f7ce2a' : '#FFFFFF'),
+                        strokeColor: ((nextProps.selectedBeanId === currBean.id) ? '#f7ce2a' : '#b37700'),
                         strokeOpacity: 1.0,
                         strokeWeight: 3,
                         geodesic: true,
