@@ -45,7 +45,7 @@ class MapView extends React.Component {
 
         this.generateShopMarker = this.generateShopMarker.bind(this);
         this.generateBeanMarker = this.generateBeanMarker.bind(this);
-        this.updateMapInternals = this.updateMapInternals.bind(this);
+        this.initializeMapData = this.initializeMapData.bind(this);
 
     }
 
@@ -80,6 +80,10 @@ class MapView extends React.Component {
 
     componentWillReceiveProps(nextProps) {
 
+        console.log(nextProps);
+
+        let newState = {};
+
         if(!this.Maps) {
             return;
         }
@@ -91,35 +95,71 @@ class MapView extends React.Component {
                 this.state.flightPaths[i].setMap(null);
             }
 
-            if(!nextProps.selectedShopId) {
-                return;
+            if(nextProps.selectedShopId) {
+
+                let selectedShop = nextProps.shopIndex[nextProps.selectedShopId];
+
+                for(var b = 0; b < selectedShop.beans.length; b++) {
+                    let currBean = selectedShop.beans[b];
+                    newFlightPaths.push(new this.Maps.Polyline({
+                        path: [
+                            {lat: selectedShop.location.lat, lng: selectedShop.location.long},
+                            {lat: currBean.origin.lat, lng: currBean.origin.long}
+                        ],
+                        strokeColor: ((nextProps.selectedBeanId === currBean.id) ? '#f7ce2a' : '#FFFFFF'),
+                        strokeOpacity: 1.0,
+                        strokeWeight: 3,
+                        geodesic: true,
+                        map: this.Map
+                    }));
+                }
+
+                newState.flightPaths = newFlightPaths;
             }
 
-            let selectedShop = nextProps.shopIndex[nextProps.selectedShopId];
-
-            for(var b = 0; b < selectedShop.beans.length; b++) {
-                let currBean = selectedShop.beans[b];
-                newFlightPaths.push(new this.Maps.Polyline({
-                    path: [
-                        {lat: selectedShop.location.lat, lng: selectedShop.location.long},
-                        {lat: currBean.origin.lat, lng: currBean.origin.long}
-                    ],
-                    strokeColor: ((nextProps.selectedBeanId === currBean.id) ? '#f7ce2a' : '#663300'),
-                    strokeOpacity: 1.0,
-                    strokeWeight: 3,
-                    geodesic: true,
-                    map: this.Map
-                }));
-            }
-
-            this.setState({
-                flightPaths: newFlightPaths
-            });
         }
+
+
+        if(nextProps.showCoffeeBelt) {
+            this.CoffeeBelt.setMap(this.Map);
+        } else {
+            this.CoffeeBelt.setMap(null);
+        }
+
+
+
+
+        this.setState(newState);
     }
 
-    updateMapInternals() {
+    initializeMapData({map, maps}) {
+        this.Maps = maps;
+        this.Map = map;
 
+        let coffeeBelt = new this.Maps.Rectangle({
+            // paths: coffeeBeltCoords,
+            strokeColor: '#FF0000',
+            strokeOpacity: 0.8,
+            fillColor: '#ff8000',
+            fillOpacity: 0.35,
+            bounds: {
+                north: 23.43709,
+                south: -23.43709,
+                east: 180,
+                west: -180
+            },
+            strokeWeight: 0
+            // geodesic: true,
+            // map: this.Map
+        });
+
+        this.CoffeeBelt = coffeeBelt;
+
+        if(this.props.showCoffeeBelt) {
+            coffeeBelt.setMap(this.Map);
+        }
+
+        
     }
 
     render() {
@@ -154,7 +194,7 @@ class MapView extends React.Component {
                         (3)
                     }
                     bootstrapURLKeys={{key: GMAPS_API_KEY}}
-                    onGoogleApiLoaded={({map, maps}) => ((this.Maps = maps) && (this.Map = map))}
+                    onGoogleApiLoaded={this.initializeMapData}
                     options={createMapOptions}
                 >
                     {
@@ -184,13 +224,16 @@ MapView.propTypes = {
         React.PropTypes.number
     ]),
     onShopMarkerClick: React.PropTypes.func,
-    onBeanMarkerClick: React.PropTypes.func
+    onBeanMarkerClick: React.PropTypes.func,
+    showCoffeeBelt: React.PropTypes.bool 
+
 };
 
 MapView.defaultProps = {
     className: "",
     onShopMarkerClick: () => {},
-    onBeanMarkerClick: () => {}
+    onBeanMarkerClick: () => {},
+    showCoffeeBelt: true
 };
 
 export default MapView;

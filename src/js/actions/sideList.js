@@ -16,6 +16,8 @@ export const DESELECT_SHOP = "DESELECT_SHOP";
 export const SELECT_BEAN = "SELECT_BEAN";
 export const DESELECT_BEAN = "DESELECT_BEAN";
 
+export const TOGGLE_COFFEE_BELT = "TOGGLE_COFFEE_BELT";
+
 function failLoadBeans(err) {
     return {
         type: FAIL_LOAD_BEANS,
@@ -109,3 +111,10 @@ export function deselectBean() {
         type: DESELECT_BEAN
     };
 }
+
+export function toggleCoffeeBelt() {
+    return {
+        type: TOGGLE_COFFEE_BELT
+    };
+}
+

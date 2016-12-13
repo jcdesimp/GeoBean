@@ -56,6 +56,15 @@ class MainView extends React.Component {
                             alt="GeoBean"
                             onClick={this.props.clearSelections}
                         />
+                        <div style={{margin: "0 auto"}}>
+                            <button
+                                onClick={this.props.toggleCoffeeBelt}
+                                style={{margin: 0, width: '100%'}}
+                                className="more-info-link"
+                            >
+                                {this.props.coffeeBeltShown ? "Hide Coffee Belt" : "Show Coffee Belt"}
+                            </button>
+                        </div>
                     </div>
                     <div style={{height: "calc(100% - 55px)"}}>
                     {
@@ -95,7 +104,9 @@ MainView.propTypes = {
     isLoadingShops: React.PropTypes.bool,
     shopSelected: React.PropTypes.bool,
     beanSelected: React.PropTypes.bool,
-    clearSelections: React.PropTypes.func
+    clearSelections: React.PropTypes.func,
+    coffeeBeltShown: React.PropTypes.bool,
+    toggleCoffeeBelt: React.PropTypes.func,
 };
 
 export default MainView;
