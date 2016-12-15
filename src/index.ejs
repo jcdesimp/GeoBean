@@ -11,18 +11,27 @@
  	<body>
 	    <div id="app-container"></div>
 	    <div id="footer">
-	    	Created By
-	    	<a href="https://github.com/jcdesimp" target="_blank">
-		    	<strong>
-		    		Joe DeSimpliciis
-		    	</strong> 
-	    	</a>
-	    	&amp;
-	    	<a href="https://github.com/kayladavis" target="_blank">
-		    	<strong>
-		    		Kayla Davis
-		    	</strong>
-	    	</a>
+	    	<span class="mail-link">
+			    <a href="mailto: geobean.creators@mail.com?subject=GeoBean%20User%20Submission">
+			    	<strong>
+				    	Submit Your Own!
+			    	</strong>
+			    </a>
+		    </span>
+		    <div class="attributions">
+		    	Created By
+		    	<a href="https://github.com/jcdesimp" target="_blank">
+			    	<strong>
+			    		Joe DeSimpliciis
+			    	</strong> 
+		    	</a>
+		    	&amp;
+		    	<a href="https://github.com/kayladavis" target="_blank">
+			    	<strong>
+			    		Kayla Davis
+			    	</strong>
+		    	</a>
+	    	</div>
 	    </div>
 	    <% for (var js in htmlWebpackPlugin.files.js) { 
 			%><script type="text/javascript" src="<%= htmlWebpackPlugin.files.js[js] %>"></script><%

@@ -35,7 +35,7 @@ body {
 
 #footer {
     background-color: $primaryColor;
-    text-align: right;
+    
     padding: 10px 50px;
     color: #ffffff;
     a {
@@ -45,6 +45,15 @@ body {
             text-decoration: underline;
             // color: $colorLightGray;
         }
+    }
+
+    & .attributions {
+        text-align: right;
+        float: right;
+    }
+
+    & .mail-link {
+        text-align: left;
     }
 }
 
