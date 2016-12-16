@@ -3,7 +3,7 @@
 import React from 'react';
 
 const containerStyle = {
-    height: "50px",
+    height: "30px",
     overflow: "hidden"
 };
 

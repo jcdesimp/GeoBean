@@ -72,7 +72,7 @@ class MainView extends React.Component {
                             </button>
                         </div>
                     </div>
-                    <div style={{height: "calc(100% - 55px)"}}>
+                    <div style={{height: "calc(100% - 95px)"}}>
                     {
                         this.props.shopSelected ?
                         (
