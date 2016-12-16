@@ -5,6 +5,7 @@ import SideList from '../sideList/connectedSideList';
 import MapView from '../mapView/connectedMapView';
 import ShopDetail from '../shopDetail/connectedShopDetail';
 import BeanDetail from '../beanDetail/connectedBeanDetail';
+import AboutPanel from '../aboutPanel/aboutPanel';
 import logoImage from 'img/geoBeanLogo.png';
 
 const mainViewStyle = {
@@ -49,6 +50,11 @@ class MainView extends React.Component {
 
         return (
             <div style={mainViewStyle}>
+                {this.props.showAboutView ? 
+                    <AboutPanel
+                        dismiss={this.props.toggleAbout}
+                    /> 
+                    : null}
                 <div style={listContainerStyle}>
                     <div className="logo-container">
                         <img
@@ -107,6 +113,8 @@ MainView.propTypes = {
     clearSelections: React.PropTypes.func,
     coffeeBeltShown: React.PropTypes.bool,
     toggleCoffeeBelt: React.PropTypes.func,
+    showAboutView: React.PropTypes.bool,
+    toggleAbout: React.PropTypes.func
 };
 
 export default MainView;

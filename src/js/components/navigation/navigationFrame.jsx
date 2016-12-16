@@ -1,14 +1,6 @@
 "use strict";
 
 import React from 'react';
-import NavigationBar from './subcomponents/navigationBar';
-
-let links = [
-    {
-        to: '/',
-        name: 'GeoBean'
-    }
-];
 
 class NavigationFrame extends React.Component {
     constructor(props) {
@@ -22,9 +14,6 @@ class NavigationFrame extends React.Component {
     render() {
         return (
             <div style={{height: "calc(100vh - 38px)"}}>
-                {/*<NavigationBar
-                                    links={links}
-                                />*/}
                 {this.props.children}
                 
             </div>  
