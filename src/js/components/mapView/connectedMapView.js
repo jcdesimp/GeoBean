@@ -10,7 +10,8 @@ const ConnectedMapView = connect(
         shopIndex: state.sideList.loadedShopIndex,
         beanIndex: state.sideList.loadedBeanIndex,
         selectedShopId: state.sideList.selectedShopId,
-        selectedBeanId: state.sideList.selectedBeanId 
+        selectedBeanId: state.sideList.selectedBeanId,
+        showCoffeeBelt: state.sideList.showCoffeeBelt
     }),
     dispatch => ({
         onShopMarkerClick: shopId => dispatch(selectShop(shopId)),

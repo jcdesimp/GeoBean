@@ -10,7 +10,9 @@ import {
         SELECT_SHOP,
         DESELECT_SHOP,
         SELECT_BEAN,
-        DESELECT_BEAN
+        DESELECT_BEAN,
+        TOGGLE_COFFEE_BELT,
+        TOGGLE_ABOUT
     } from "../actions/sideList";
 
 const defaultState = {
@@ -24,7 +26,9 @@ const defaultState = {
     selectedShopId: null,
     fetchShopsError: null,
     filter: "",
-    selectedBeanId: null
+    selectedBeanId: null,
+    showCoffeeBelt: true,
+    showAboutView: false
 };
 
 
@@ -78,6 +82,14 @@ export default function handleAction(state = defaultState, action) {
     case DESELECT_BEAN:
         return Object.assign({}, state, {
             selectedBeanId: null
+        });
+    case TOGGLE_COFFEE_BELT:
+        return Object.assign({}, state, {
+            showCoffeeBelt: !state.showCoffeeBelt
+        });
+    case TOGGLE_ABOUT:
+        return Object.assign({}, state, {
+            showAboutView: (!state.showAboutView)
         });
     default:
         return state;

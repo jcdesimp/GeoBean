@@ -26,7 +26,7 @@ class BeanList extends React.Component {
     createShopEntry(shopData) {
         return (
             <ShopEntry
-                className="bean-list-entry"
+                className="shop-list-entry"
                 key={`shop_${shopData.id}`}
                 name={shopData.name}
                 description={shopData.description}

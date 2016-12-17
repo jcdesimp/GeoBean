@@ -5,6 +5,7 @@ import SideList from '../sideList/connectedSideList';
 import MapView from '../mapView/connectedMapView';
 import ShopDetail from '../shopDetail/connectedShopDetail';
 import BeanDetail from '../beanDetail/connectedBeanDetail';
+import AboutPanel from '../aboutPanel/aboutPanel';
 import logoImage from 'img/geoBeanLogo.png';
 
 const mainViewStyle = {
@@ -49,6 +50,11 @@ class MainView extends React.Component {
 
         return (
             <div style={mainViewStyle}>
+                {this.props.showAboutView ? 
+                    <AboutPanel
+                        dismiss={this.props.toggleAbout}
+                    /> 
+                    : null}
                 <div style={listContainerStyle}>
                     <div className="logo-container">
                         <img
@@ -56,8 +62,17 @@ class MainView extends React.Component {
                             alt="GeoBean"
                             onClick={this.props.clearSelections}
                         />
+                        <div style={{margin: "0 auto"}}>
+                            <button
+                                onClick={this.props.toggleCoffeeBelt}
+                                style={{margin: 0, width: '100%'}}
+                                className="more-info-link"
+                            >
+                                {this.props.coffeeBeltShown ? "Hide Coffee Belt" : "Show Coffee Belt"}
+                            </button>
+                        </div>
                     </div>
-                    <div style={{height: "calc(100% - 55px)"}}>
+                    <div style={{height: "calc(100% - 95px)"}}>
                     {
                         this.props.shopSelected ?
                         (
@@ -95,7 +110,11 @@ MainView.propTypes = {
     isLoadingShops: React.PropTypes.bool,
     shopSelected: React.PropTypes.bool,
     beanSelected: React.PropTypes.bool,
-    clearSelections: React.PropTypes.func
+    clearSelections: React.PropTypes.func,
+    coffeeBeltShown: React.PropTypes.bool,
+    toggleCoffeeBelt: React.PropTypes.func,
+    showAboutView: React.PropTypes.bool,
+    toggleAbout: React.PropTypes.func
 };
 
 export default MainView;
