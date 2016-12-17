@@ -110,6 +110,117 @@
             "long": -76.020278
         },
         "shop_id": 2
+    },
+    {
+        "id": 9,
+        "name": "Ethiopa Worka Yirgacheffe Natural",
+        "notes": "Cherry, Apricot, Mild chocolate",
+        "origin": {
+            "name": "WORKA Cooperative",
+            "description": "The WORKA Cooperative was established in 2005 and joined the Yirgacheffe Coffee Farmers Cooperative Union (YCFCU) the same year. There are 305 member farmers who cultivate coffee on 762 hectares in Worka, Gedeb in the Gedeo Zone. YCFCU currently has 24 member coops, and each primary cooperative elects their own governing committee and professional farm managers. The governing committees make decisions about investing in new equipment purchases, scheduling tree maintenance, and how to structure payments to the cooperative members. The professional managers for each primary cooperative oversee the harvest and processing procedures and are accountable to the coop’s members and other committees.",
+            "image": "http://www.georgioscoffee.com/ProductImages/112360/md_5c7fa6_Ethiopia%20Yirga%20Ci.jpg",
+            "link": "http://www.cafeimports.com/origin_ethiopia",
+            "lat": 6.157685,
+            "long": 38.197840
+        },
+        "shop_id": 4
+    },
+    {
+        "id": 10,
+        "name": "Ethiopia Sidama Ardi Natural",
+        "notes": "Strawberry, Milk chocolate",
+        "origin": {
+            "name": "Aklilu Mill",
+            "description": "This coffee is grown by a multitude of smallholder farmers in and around the town of Kilenso, near the banks of the Rarea River in the Guji Woreda of Sidama. The area is known for its green highland hills, steep slopes and adjacent natural forest. Ardi is named to honor the discovery of the skeleton of the oldest human ancestor, Ardipithecus ramidus,  a 4.4 million year old skeleton that was discovered near the Awash River in Ethiopia around the same time this beautiful coffee was first being selected.",
+            "image": "http://www.georgioscoffee.com/ProductImages/112360/md_c8f65f_ardi.jpg",
+            "link": "http://www.cafeimports.com/origin_ethiopia",
+            "lat": 6.941539,
+            "long": 38.569142
+        },
+        "shop_id": 4
+    },
+    {
+        "id": 11,
+        "name": "Papua New Guinea Nebliyer Valley",
+        "notes": "Chocolate, Spice, full bodied",
+        "origin": {
+            "name": "Tambul-Nebilyer District organized around the Kuta mill",
+            "description": "This coffee is sourced from family owned farms located in the Nebilyer Valley within Tambul-Nebilyer District, Papua New Guinea.  Each producer cultivates coffee on 1 to 2 hectares of land.  The coffee is fully washed and sun dried at the Kuta mill, which has been in operation for over 40 years.  The Kuta mill operates between the Ulga and Kolga tribes and has become a place of common ground for producers who have traditionally been in conflict because of tribal differences.  The mill owner, Brian Leahy, makes a bonus payment after the harvest to farmers who consistently deliver quality cherries.",
+            "image": "http://royalcoffee.com/wp-content/uploads/2015/12/nva162.jpg",
+            "link": "https://www.youtube.com/watch?v=T6o-_rgJS_A",
+            "lat": -5.925,
+            "long": 144.011
+        },
+        "shop_id": 4
+    },
+    {
+        "id": 12,
+        "name": "Finca El Hato DECAF",
+        "notes": "Marzipan, Dark chocolate, toffee",
+        "origin": {
+            "name": "El Hato Estate",
+            "description": "After leaving Guatemala City on the road to Salvador, travellers can admire the volcanoes in the central Guatemalan Cordillera. Among them, the Pacaya volcano stands out because of its size and the persistent plumes of smoke that rise from it. Immediately after this lies the region of Santa Rosa, with its harmonious highlands and wooded hills. El Hato is produced in this area, on the Finca El Hato Blue, in the midst of a huge nursery of multicolored orchids.",
+            "image": "http://www.arcaffe.com/wp-content/uploads/2014/05/el-hato-blue.jpg",
+            "link": "https://www.caravancoffeeroasters.co.uk/blogs/news/102213959-guatemala-finca-el-hato-back-from-the-brink-a-lesson-in-progressive-farming",
+            "lat": 14.422534,
+            "long": -90.437219
+        },
+        "shop_id": 3
+    },
+    {
+        "id": 13,
+        "name": "Gititu AA",
+        "notes": "Gooseberry, brown sugar",
+        "origin": {
+            "name": "Aguthi farmers in Tetu Division, Nyeri County",
+            "description": "Located on the highly productive area bordered in the west by Mt. Kenya, and the east by the Abadare ranges, Gititu is one of four factories operated by the Aguthi Farmers Co-op Society. The coop is managed by seven committee members, elected by its 4,000 farmers. This committee, supported by 60 permanent staff, oversees the day-to-day of the co-op, harvest, reception, and processing. Gititu now produces an average of 150,000 pounds, collected from 800 farmers. The farmers here plant in lower density than other co-ops, with 300 trees to the acre rather than 400 in other areas.",
+            "image": "http://images.cafeimports.com/18087-img2371-copy.jpg",
+            "link": "http://www.cafeimports.com/beanology/view/aa-gititu-grainpro-3351",
+            "lat": -0.439372,
+            "long": 36.910482
+        },
+        "shop_id": 3
+    },
+    {
+        "id": 14,
+        "name": "Rwanda Tumba",
+        "notes": "Coconut, peaches, pomegranate",
+        "origin": {
+            "name": "Farmers in Tumba, Rwanda",
+            "description": "Cocatu is a cooperative in the area of Tumba town, in the very mountainous Rulindo district, Northern Rwanda. Located at 1820 meters, the coop actually draws coffee from the surrounding hills up to 2100 meters",
+            "image": "http://www.coffeeshrub.com/shrub/sites/default/files/imagecache/full/Cocatu%20Cooperative,%20Rulindo,%20Rwanda-2.jpg",
+            "link": "http://www.coffeeshrub.com/shrub/coffee/rwanda-tumba-cocatu-1",
+            "lat": -1.6945316,
+            "long": 29.9463888
+        },
+        "shop_id": 5
+    },
+    {
+        "id": 15,
+        "name": "Colombia El Tablon",
+        "notes": "Lime, rose",
+        "origin": {
+            "name": "Farmers in El Tablon",
+            "description": "The coffee cherries can only be harvested individually, by hand. The three dozen El Tablón farmers in this lot each own less than five acres of land, and their painstaking picking results in excellent pre-sorting.",
+            "image": "http://www.colombia.travel/sites/default/files/styles/activity_banner/public/2Conoce-El-Tablon-La-Chaquira-y-La-Pelota.jpg?itok=d392h_Jb",
+            "link": "https://es.wikipedia.org/wiki/El_Tabl%C3%B3n",
+            "lat": 1.426944,
+            "long": -77.096944
+        },
+        "shop_id": 5
+    },
+    {
+        "id": 16,
+        "name": "Honduras El Ocotillo",
+        "notes": "Strawberry, vanilla",
+        "origin": {
+            "name": "Natividad Benitez of El Cielito",
+            "description": "The area of El Cielito is close to the micro regions of El Cedral, and Las Flores where we work with several other producers. For the last couple years, Natividad’s focus has been on maintaining quality through a period of growth on his farm, with additional Pacas plots coming into full production. These 3 new manzanas (1 manzana is approx 70% of a hectare) have come to significant production this crop year and we are starting to see an increase in volume from Natividad. There aren’t many smallholder farmers we know who take as much care over cash flow and finance to support both quality of life and the coffee when operating a farm of this size.",
+            "image": "http://cdn.shopify.com/s/files/1/0803/6099/products/Ocotillo_grande.jpg?v=1480615035",
+            "link": "https://www.youtube.com/watch?v=BPq1ZnYVCgU",
+            "lat": 14.924843,
+            "long": -88.316299
+        },
+        "shop_id": 6
     }
-
 ]
